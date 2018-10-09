@@ -8,14 +8,12 @@ highlighter: pygments
 # Themes are encouraged to use these universal variables 
 # so be sure to set them if your theme uses them.
 #
-title : Enjoy Learning life
+title : 叶子鹤
 tagline: Site Tagline
 author :
   name : Soderberg Zuo
-  email : zuohd@shinetechchina.com
-  github : zuohd
-  twitter : username
-  feedburner : feedname
+  email : zuo.houde@gmail.com
+  github : zuohd  
 
 # The production_url is only used when full-domain names are needed
 # such as sitemap.txt 
