@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Welcome to Jekyll!"
+title:  "将博客升级到最新Jekyll版本"
 date:   2018-10-09 19:37:48 +0800
 categories: jekyll update
 ---
