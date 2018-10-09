@@ -1,18 +1,7 @@
 ---
 layout: page
-title: About
+title: 关于我
 permalink: /about/
 ---
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](https://jekyllrb.com/)
-
-You can find the source code for Minima at GitHub:
-[jekyll][jekyll-organization] /
-[minima](https://github.com/jekyll/minima)
-
-You can find the source code for Jekyll at GitHub:
-[jekyll][jekyll-organization] /
-[jekyll](https://github.com/jekyll/jekyll)
-
-
-[jekyll-organization]: https://github.com/jekyll
+7年以上技术工作经验，有过3年左右跟朋友的创业经历，5年以上欧美项目外包经验，工作中善于对整体宏观把握、对代码质量和Clean code高要求、理想中的团队应是自我驱动型并自组织、个人注重工作与生活的平衡、享受工作乐趣，开发cool产品，喜欢有趣的公司文化。跟其他程序员不同的是不爱打游戏，没事喜欢折腾机器以及开发环境，幻想把敏捷思想用于生活中的一切。
