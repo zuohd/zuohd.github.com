@@ -5,7 +5,7 @@ date:   2018-10-13 01:37:48 +0800
 categories: soft-skills
 tags: [自我提升]
 ---
-![](https://pandao.github.io/editor.md/examples/images/8.jpg)
+![题图](https://pandao.github.io/editor.md/examples/images/8.jpg)
 
 > 图为：厦门白城沙滩
 
