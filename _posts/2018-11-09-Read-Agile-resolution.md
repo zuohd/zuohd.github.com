@@ -5,9 +5,6 @@ date:   2018-11-09 01:37:48 +0800
 categories: soft-skills
 tags: [自我提升]
 ---
-![题图](http://cover.read.duokan.com/mfsv2/download/fdsc3/p01ZbX81eT5a/zmqcLaOiS4SklE.jpg!l)
-
-> 图为：敏捷革命图书封面
 
 《敏捷革命》是很伟大的一本书，讲述了Scrum的来龙去脉以及该框架要遵守的原则，读完之后有种醍醐灌顶的感觉，特将要点总结如下，当然要想从中最大化受益，建议好好读，也值得细细读：
 
@@ -30,3 +27,7 @@ tags: [自我提升]
 **9.敏捷教练的工作职责就是经常问团队成员；你们如何才能做的更好？一个团队必须发自内心的希望创造卓越。**
 
 **10.不要一味的寻找坏人，而要寻找坏制度。**
+
+![题图](http://cover.read.duokan.com/mfsv2/download/fdsc3/p01ZbX81eT5a/zmqcLaOiS4SklE.jpg!l)
+
+> 图为：敏捷革命图书封面
