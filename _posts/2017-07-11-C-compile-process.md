@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "从C源文件到可执行文件过程"
+title:  "从C源文件到可执行文件过程浅析"
 date:   2017-07-11 08:35:48 +0800
 categories: programming
 tags: [technology]
@@ -88,5 +88,6 @@ gcc firstC.o -o firstC
 gcc firstC.c -o hello
 
 ```
+>如果使用`make firstC`将生成与源文件同名的可执行文件
 
 
