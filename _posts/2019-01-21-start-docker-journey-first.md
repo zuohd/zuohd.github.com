@@ -6,16 +6,15 @@ categories: DOCKER
 tags: [technology]
 ---
 我这里使用了[vagrant][vagrant-link]和[Virtual Box][VirtualBox-link]作为实验环境,其使用方法参照了博客文章[路径（七）：用 Vagrant 管理虚拟机][use-vagrant],另外安装完毕后，需要启用计算机Bios的`intel virtual technology`,并在windows控制面板中卸载hyper-v,box文件资源可以网上下载，这样安装会比较快。
-[vagrant-link]:https://www.vagrantup.com/
-[VirtualBox-link]:https://www.virtualbox.org/
-[use-vagrant]:https://ninghao.net/blog/2077
 
 ## 修改生成的vagrantfile，配置其vmbox名称和虚拟机启动后执行的脚本(安装docker)
 
 ``` vagrantfile
 
-config.vm.box = "centos-7" #名字需要与之前定义的vagrant box名称一致
-------
+config.vm.box = "centos-7"  #=>名字需要与之前定义的vagrant box名称一致
+
+--------------------------黄金分割线-------------------------
+
  config.vm.provision "shell", inline: <<-SHELL
      sudo yum remove docker docker-client docker-client-latest docker-common docker-latest docker-latest-logrotate docker-logrotate docker-engine
 	 sudo yum install -y yum-utils device-mapper-persistent-data lvm2
@@ -58,10 +57,9 @@ docker container ls
 
 ```
 5.参考[Docker pull 出现的TLS handshake timeout][docker-pull-tls-handshake-timeout]执行以下命令加速docker镜像下载
-[docker-pull-tls-handshake-timeout]:https://blog.kelu.org/tech/2017/02/08/docker-pull-tls-handshake-timeout.html
 
 ``` shell
-   echo "DOCKER_OPTS=\"\$DOCKER_OPTS --registry-mirror=http://f2d6cb40.m.daocloud.io\"" | sudo tee -a /etc/default/d
+echo "DOCKER_OPTS=\"\$DOCKER_OPTS --registry-mirror=http://f2d6cb40.m.daocloud.io\"" | sudo tee -a /etc/default/d
 ocker
 ```
 
@@ -80,23 +78,39 @@ docker pull ubuntu:14.04
 
 ```
 ## 构建一个简单的docker image
-1.创建dockfile
+1.参照[创建一个c文件][C-compile-process],命名为hello.c并编译
+
+
+2.创建dockfile
 ``` dockfile
 FROM scratch
 ADD hello /
 CMD ["/hello"]
 ```
-2.编译
+3.编译
 ``` shell
 docker build -t soderberg/hello-world .
 ```
-3.运行container
+4.运行container
 ``` shell
 docker run soderberg/hello-world
 ```
-4.查看docker镜像的层
+5.查看docker镜像的层
 ```shell
 docker history 928b474fce0f #=>928b474fce0f 对应的是IMAGE ID
 ```
+>查看执行结果
 
+``` output
+[vagrant@localhost hello-world]$ docker history 928b474fce0f
+IMAGE               CREATED              CREATED BY                                      SIZE                COMMENT
+928b474fce0f        About a minute ago   /bin/sh -c #(nop)  CMD ["/hello"]               0B
+63f27a030eb2        About a minute ago   /bin/sh -c #(nop) ADD file:589e7a47dcdc1f1bd…   861kB
+```
+
+[vagrant-link]:https://www.vagrantup.com/
+[VirtualBox-link]:https://www.virtualbox.org/
+[use-vagrant]:https://ninghao.net/blog/2077
+[docker-pull-tls-handshake-timeout]:https://blog.kelu.org/tech/2017/02/08/docker-pull-tls-handshake-timeout.html
+[C-compile-process]:https://zuohd.github.io/programming/2017/07/11/C-compile-process.html
 
