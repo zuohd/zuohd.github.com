@@ -7,7 +7,7 @@ tags: [technology]
 ---
 我这里使用了[vagrant][vagrant-link]和[Virtual Box][VirtualBox-link]作为实验环境,其使用方法参照了博客文章[路径（七）：用 Vagrant 管理虚拟机][use-vagrant],另外安装完毕后，需要启用计算机Bios的`intel virtual technology`,并在windows控制面板中卸载hyper-v,box文件资源可以网上下载，这样安装会比较快。
 
-## 修改生成的vagrantfile，配置其vmbox名称和虚拟机启动后执行的脚本(安装docker)
+### 一、修改生成的vagrantfile，配置其vmbox名称和虚拟机启动后执行的脚本(安装docker)
 
 ``` vagrantfile
 
@@ -23,8 +23,6 @@ config.vm.box = "centos-7"  #=>名字需要与之前定义的vagrant box名称�
 	 sudo systemctl start docker
    SHELL
 end
-
-
 ```
 1.将vagrant用户添加到docker用户组
 
@@ -77,7 +75,7 @@ docker pull nginx
 docker pull ubuntu:14.04 
 
 ```
-## 构建一个简单的docker image
+### 二、 构建一个简单的docker image
 1.参照[创建一个c文件][C-compile-process],命名为hello.c并编译
 
 
@@ -107,7 +105,7 @@ IMAGE               CREATED              CREATED BY                             
 928b474fce0f        About a minute ago   /bin/sh -c #(nop)  CMD ["/hello"]               0B
 63f27a030eb2        About a minute ago   /bin/sh -c #(nop) ADD file:589e7a47dcdc1f1bd…   861kB
 ```
-## docker container 的操作
+### 三、 docker container 的操作
 1.守护方式启动container
 
 ```shell
