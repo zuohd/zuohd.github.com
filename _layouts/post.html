@@ -19,7 +19,7 @@ layout: default
 {% endif %}
 
 
-{% assign words = content | strip_html | number_of_words %}
+{% assign words = content | strip_html | strip_newlines | split: "" | size %}
  &nbsp;&nbsp; 
    <span><i class="fa fa-clock-o" aria-hidden="true"></i> 
 {% if words < 360 %}
