@@ -4,6 +4,7 @@ title:  "解决Jekyll编译报错"
 date:   2018-10-10 10:51:48 +0800
 categories: Jekyll
 tags: [blog tricks]
+author: Soderberg
 ---
 在执行jekyll build 命令时遇到了如下警告：
 ``` warnnings
