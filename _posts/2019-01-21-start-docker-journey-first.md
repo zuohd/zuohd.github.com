@@ -107,6 +107,60 @@ IMAGE               CREATED              CREATED BY                             
 928b474fce0f        About a minute ago   /bin/sh -c #(nop)  CMD ["/hello"]               0B
 63f27a030eb2        About a minute ago   /bin/sh -c #(nop) ADD file:589e7a47dcdc1f1bd…   861kB
 ```
+## docker container 的操作
+1.守护方式启动container
+
+```shell
+docker run -d zuohd/flask-demo
+```
+2.进入容器执行命令
+
+``` shell
+docker exec -it ebfa510c1e0b /bin/bash
+```
+3.列出运行的容器IP地址
+``` shell
+docker exec -it ebfa510c1e0b ip a
+ 
+```
+>查看执行结果
+
+``` output
+[root@localhost flask-hello-world]# docker exec -it ebfa510c1e0b ip a
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+38: eth0@if39: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue state UP group default 
+    link/ether 02:42:ac:11:00:03 brd ff:ff:ff:ff:ff:ff link-netnsid 0
+    inet 172.17.0.3/16 brd 172.17.255.255 scope global eth0
+       valid_lft forever preferred_lft forever
+```
+4.停止容器
+
+``` shell
+docker stop ebfa510c1e0b
+```
+5.启动容器
+``` shell
+docker start ebfa510c1e0b
+```
+6.移除所有容器实例
+``` shell
+docker rm $(docker ps -aq)
+```
+7.给docker容器实例命名
+``` shell
+docker run -d --name=appserver zuohd/flask-demo
+```
+8.查看容器详细信息
+``` shell
+docker inspect a51b112c4f60
+``` 
+9.查看容器日志信息
+``` shell
+docker logs -f a51b112c4f60
+``` 
 
 [vagrant-link]:https://www.vagrantup.com/
 [VirtualBox-link]:https://www.virtualbox.org/
