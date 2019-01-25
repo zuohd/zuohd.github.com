@@ -1,12 +1,12 @@
 ---
 layout: post
-title:  "linux shell 查找目录下所有txt文件并去掉扩展名"
+title:  "Linux shell 查找目录下所有txt文件并去掉扩展名"
 date:   2015-02-01 12:37:48 +0800
-categories: linux shell
-tags: [linux shell]
+categories: Linux shell
+tags: [Linux shell]
 author: Soderberg
 ---
- 今天看linux脚本编程的时候，想到一个需求：查找/home/shell/homework下(包含子目录)所有的文本文件并去掉其扩展名，遂有了下面的想法：
+ 今天看Linux脚本编程的时候，想到一个需求：查找/home/shell/homework下(包含子目录)所有的文本文件并去掉其扩展名，遂有了下面的想法：
 
 ``` shell
 #!/bin/bash

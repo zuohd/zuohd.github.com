@@ -1,8 +1,8 @@
 ---
 layout: post
-title:  "linux shell 定期备份log文件"
+title:  "Linux shell 定期备份log文件"
 date:   2015-02-03 12:37:48 +0800
-categories: linux shell
+categories: Linux shell
 tags: [backup shell]
 author: Soderberg
 ---
