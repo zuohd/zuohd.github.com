@@ -4,7 +4,7 @@ title:  "构建自学习框架-意识篇"
 date:   2018-10-13 01:37:48 +0800
 categories: soft-skills
 tags: [自我提升]
-author: Soderberg
+
 ---
 ![题图](https://pandao.github.io/editor.md/examples/images/8.jpg)
 

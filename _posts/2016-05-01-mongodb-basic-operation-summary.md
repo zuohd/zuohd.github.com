@@ -4,7 +4,7 @@ title:  "MongoDB 数据操作总结"
 date:   2016-05-01 19:37:48 +0800
 categories: No SQL
 tags: [MongoDB]
-author: Soderberg
+
 ---
 
 ## 操作MONGODB数据库

@@ -4,7 +4,7 @@ title:  "云服务组件配置"
 date:   2017-01-01 19:37:48 +0800
 categories: Azure
 tags: [service fabric,arm]
-author: Soderberg
+
 ---
 
 *Note：打开模板文件请使用 [JSON对象查看器](http://www.jsoneditoronline.org/)*

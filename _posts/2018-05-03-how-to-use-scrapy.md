@@ -4,7 +4,7 @@ title:  "Scrapy 爬虫使用小结"
 date:   2018-05-03 20:35:48 +0800
 categories: crawler
 tags: [Scrapy]
-author: Soderberg
+
 ---
 
 ## 创建一个新的Scrapy项目

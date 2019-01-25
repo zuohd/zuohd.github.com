@@ -4,7 +4,7 @@ title:  "启动docker实践之旅"
 date:   2019-01-21 08:35:48 +0800
 categories: DOCKER
 tags: [technology]
-author: Soderberg
+
 ---
 我这里使用了[vagrant][vagrant-link]和[Virtual Box][VirtualBox-link]作为实验环境,其使用方法参照了博客文章[路径（七）：用 Vagrant 管理虚拟机][use-vagrant],另外安装完毕后，需要启用计算机Bios的`intel virtual technology`,并在windows控制面板中卸载hyper-v,box文件资源可以网上下载，这样安装会比较快。
 

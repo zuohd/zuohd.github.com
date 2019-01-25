@@ -4,7 +4,7 @@ title:  "Redis 数据操作总结"
 date:   2017-01-01 18:37:48 +0800
 categories: No SQL
 tags: [Redis]
-author: Soderberg
+
 ---
 
 ## String

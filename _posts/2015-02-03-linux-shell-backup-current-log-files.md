@@ -4,7 +4,7 @@ title:  "Linux shell 定期备份log文件"
 date:   2015-02-03 12:37:48 +0800
 categories: Linux shell
 tags: [backup shell]
-author: Soderberg
+
 ---
 >实现将/home/shell/homework/logs目录下所有当前周生成的log文件备份至/home/shell/homework/currentweeklogs,不能改变源文件的创建修改日期，每周日备份。
                 
