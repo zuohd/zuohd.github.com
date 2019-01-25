@@ -3,21 +3,65 @@ layout: post
 title: 标签云
 permalink: /tags/
 ---
-<ul class="tags">
+<style>
+h4{
+    margin:10px 0 0 0
+}
+ ul.posts {
+    list-style-type: none;
+    margin-bottom: 2rem;
+    padding: 0;
+}
+
+ul.posts li span {
+    color: silver;
+}
+
+.tag-box {
+    list-style: none;
+    margin: 0;
+    padding: 4px 0;
+    overflow: hidden;
+}
+
+.tag-box.inline li {
+    float: left;
+    font-size: 14px;
+    font-size: 0.875rem;
+    line-height: 2.5;
+}
+
+.tag-box a {
+    padding: 4px 6px;
+    margin: 2px;
+    background-color: #e6e6e6;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    text-decoration: none;
+}
+
+.tag-box a span {
+    vertical-align: super;
+    font-size: 10px;
+    font-size: 0.625rem;
+}
+</style>
+<ul class="tag-box inline">
     {% for tag in site.tags %}
     <li>
-        <a href="#{{ tag[0] }}">{{ tag[0] }}</a> <sup>{{ tag[1].size }}</sup>
+        <a href="#{{ tag[0] }}">{{ tag[0] }}<span>{{ tag[1].size }}</span></a> 
     </li>
     {% endfor %}
 </ul>
 
-<ul class="listing">
+<ul class="posts">
     {% for tag in site.tags %}
-    <li class="listing-seperator" id="{{ tag[0] }}">{{ tag[0] }}</li>
+    <h4 id="{{ tag[0] }}">{{ tag[0] }}</h4>
     {% for post in tag[1] %}
-    <li class="listing-item">
-        <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
+    <li itemscope>        
         <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+        <span><time datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished"> {{ post.date | date: "%B %d, %Y" }}</time></span>
     </li>
     {% endfor %}
 {% endfor %}
