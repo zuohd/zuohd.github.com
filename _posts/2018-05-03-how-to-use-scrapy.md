@@ -2,8 +2,8 @@
 layout: post
 title:  "Scrapy 爬虫使用小结"
 date:   2018-05-03 20:35:48 +0800
-categories: 技术
-tags: [Scrapy,crawler]
+categories: technology
+tags: [Scrapy,Python crawler]
 
 ---
 

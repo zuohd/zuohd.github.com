@@ -2,7 +2,7 @@
 layout: post
 title:  "启动docker实践之旅"
 date:   2019-01-21 08:35:48 +0800
-categories: 技术
+categories: technology
 tags: [DOCKER]
 
 ---

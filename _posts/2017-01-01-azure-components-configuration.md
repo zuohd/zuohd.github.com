@@ -2,7 +2,7 @@
 layout: post
 title:  "云服务组件配置"
 date:   2017-01-01 19:37:48 +0800
-categories: 技术
+categories: technology
 tags: [Azure service fabric,arm]
 
 ---

@@ -2,7 +2,7 @@
 layout: post
 title:  "解决Jekyll编译报错"
 date:   2018-10-10 10:51:48 +0800
-categories: 技术
+categories: technology
 tags: [blog tricks,Jekyll]
 
 ---

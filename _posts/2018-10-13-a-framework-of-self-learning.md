@@ -2,8 +2,8 @@
 layout: post
 title:  "构建自学习框架-意识篇"
 date:   2018-10-13 01:37:48 +0800
-categories: 软技能
-tags: [soft-skills,自我提升]
+categories: soft-skills
+tags: [自我提升]
 
 ---
 ![题图](https://pandao.github.io/editor.md/examples/images/8.jpg)
