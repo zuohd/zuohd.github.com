@@ -2,7 +2,7 @@
 layout: post
 title:  "Linux shell 定期备份log文件"
 date:   2015-02-03 12:37:48 +0800
-categories: Linux shell
+categories: 技术
 tags: [backup shell]
 
 ---

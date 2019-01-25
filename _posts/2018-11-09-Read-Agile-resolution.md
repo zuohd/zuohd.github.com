@@ -2,8 +2,8 @@
 layout: post
 title:  "敏捷革命-读后感"
 date:   2018-11-09 01:37:48 +0800
-categories: soft-skills
-tags: [自我提升]
+categories: 软技能
+tags: [自我提升,soft-skills]
 
 ---
 

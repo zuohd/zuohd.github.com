@@ -2,8 +2,8 @@
 layout: post
 title:  "解决Jekyll编译报错"
 date:   2018-10-10 10:51:48 +0800
-categories: Jekyll
-tags: [blog tricks]
+categories: 技术
+tags: [blog tricks,Jekyll]
 
 ---
 在执行jekyll build 命令时遇到了如下警告：

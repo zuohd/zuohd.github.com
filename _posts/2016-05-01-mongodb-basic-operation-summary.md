@@ -2,8 +2,8 @@
 layout: post
 title:  "MongoDB 数据操作总结"
 date:   2016-05-01 19:37:48 +0800
-categories: No SQL
-tags: [MongoDB]
+categories: 技术
+tags: [MongoDB,No SQL]
 
 ---
 

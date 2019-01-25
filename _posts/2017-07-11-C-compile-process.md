@@ -2,8 +2,8 @@
 layout: post
 title:  "从C源文件到可执行文件过程浅析"
 date:   2017-07-11 08:35:48 +0800
-categories: programming
-tags: [technology]
+categories: 技术
+tags: [technology,programming]
 
 ---
 
