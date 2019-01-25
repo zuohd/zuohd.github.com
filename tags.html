@@ -61,7 +61,7 @@ ul.posts li span {
     {% for post in tag[1] %}
     <li itemscope>        
         <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-        <span><time datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished"> {{ post.date | date: "%B %d, %Y" }}</time></span>
+        <span><time datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished"> {{ post.date | date: "%b %-d, %Y" }}</time></span>
     </li>
     {% endfor %}
 {% endfor %}
