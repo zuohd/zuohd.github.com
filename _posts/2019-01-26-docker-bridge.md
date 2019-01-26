@@ -35,6 +35,7 @@ docker network inspect 01e1710ea79f
 代表test1连接的是此桥接网络
 
 3.查看桥接网络以及接口-该命令需要安装bridge-utils
+
 ```shell
  brctl show
 ```
