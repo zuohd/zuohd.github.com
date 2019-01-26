@@ -3,7 +3,7 @@ layout: post
 title:  Linux 网络命名空间之相互通讯
 date:   2019-01-26 08:35:48 +0800
 categories: technology
-tags: [Linux]
+tags: [Linux shell]
 
 ---
 Docker 容器之间之所以能通讯，也是利用了网络命名空间的原理，我们可以创建两个容器，然后使用命令`docker exec 6b51903a07f5 ip a`查看容器的IP地址。
