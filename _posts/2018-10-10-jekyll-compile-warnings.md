@@ -31,4 +31,4 @@ gem update --default
 ```
 
 > 参考来源
-:https://stackoverflow.com/questions/51334732/rails-5-2-0-with-ruby-2-5-1-console-warning-already-initialized-constant
+[console warning already initialized constant](https://stackoverflow.com/questions/51334732/rails-5-2-0-with-ruby-2-5-1-console-warning-already-initialized-constant)
