@@ -54,6 +54,14 @@ Commercial support is available at
 </body>
 </html>
 ```
+另外我们可以通过命令查看docker端口映射
+
+```shell
+docker port web
+```
+输出结果:
+
+>80/tcp -> 0.0.0.0:80
 
 
 
