@@ -3,7 +3,7 @@ layout: post
 title:  Docker之Bridge
 date:   2019-01-26 13:35:48 +0800
 categories: technology
-tags: [Linux shell]
+tags: [DOCKER]
 ---
 1.查看本地docker网络
 ```shell
