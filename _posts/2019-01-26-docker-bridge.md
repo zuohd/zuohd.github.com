@@ -3,7 +3,7 @@ layout: post
 title:  Docker网络连接之bridge
 date:   2019-01-26 13:35:48 +0800
 categories: technology
-tags: [DOCKER,Bridge]
+tags: [Docker,Bridge]
 ---
 ### 一、Docker Bridge连接查询
 1.查看本地docker网络

@@ -3,7 +3,7 @@ layout: post
 title:  Docker数据存储
 date:   2019-01-28 14:35:48 +0800
 categories: technology
-tags: [Docker volume]
+tags: [Docker,Docker volume]
 ---
 ### 一、Docker之卷标volume
 Volume我们可以在dockerfile中指定，保证容器删除后数据不丢失。
