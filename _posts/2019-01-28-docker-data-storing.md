@@ -66,4 +66,4 @@ mysql> show databases;
 docker run -d -v $(pwd):/usr/share/nginx/html -p 80:80 --name nginx-web zuohd/ngin
 x-hello
 ```
-主机当前目录将和docker容器的`/usr/share/nginx/html`数据同步
+主机当前目录将和docker容器的`/usr/share/nginx/html`数据同步,利用此机制我们可以将我们的源码目录与服务器部署目录同步调试，减少了开发人员的工作量。
