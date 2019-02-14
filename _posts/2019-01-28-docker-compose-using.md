@@ -79,8 +79,13 @@ docker-compose stop #终止所有的service
 docker-compose up -d #守护进程启动service但不输出日志
 docker-compose images #列出所有的容器以及镜像信息
 docker-compose exec mysqldb bash #进入mysqldb容器中执行bash命令
-
-
+docker-compose build #构建镜像
+docker-compose build --no-cache web #不带缓存的构建web服务，当我们修改了web程序的内容需要刷新缓存
+docker-compose config -q #验证（docker-compose.yml）文件配置，当配置正确时，不输出任何内容，当文件配置错误，输出错误信息。
 ```
+>参考来源
+
+[Docker-compose常用命令](https://www.cnblogs.com/moxiaoan/p/9299404.html)
+
 [daocloud-link]:https://get.daocloud.io/
 [yaml-link]:http://docs.saltstack.cn/topics/yaml/index.html
