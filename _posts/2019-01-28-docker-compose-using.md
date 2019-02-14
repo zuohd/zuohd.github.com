@@ -68,7 +68,57 @@ networks:
     driver: bridge
 
 ```
-3.访问127.0.0.1:8090，浏览器会显示wordpress安装界面表示容器启动成功
+访问127.0.0.1:8090，浏览器会显示wordpress安装界面表示容器启动成功
+
+3.docker-compose 从本地构建镜像,新建一个目录，其下新建3个文件：
+
+~ app.py:
+
+``` python
+from flask import Flask
+from redis import Redis
+import os
+import socket
+app = Flask(__name__)
+redis = Redis(host=os.environ.get('REDIS_HOST', '127.0.0.1'), port=6379)
+@app.route('/')
+def hello():
+    redis.incr('hits')
+    return 'Hello Docker World! I have been seen %s times.\n' % (
+        redis.get('hits'))
+
+if __name__ == "__main__":
+    app.run(host="0.0.0.0", port=5000, debug=True)
+
+```
+
+~ Dockerfile:
+
+``` Dockerfile
+FROM python:2.7
+LABEL maintainer="soderberg zuo<zuo.houde@gmail.com>"
+COPY . /app
+WORKDIR /app
+RUN pip install flask redis
+EXPOSE 5000
+CMD [ "python", "app.py" ]
+```
+~ docker-compose.yml:
+
+``` docker-compose.yml
+version: "3"
+services:
+  redis:
+    image: redis
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - 8080:5000
+    environment:
+      REDIS_HOST: redis
+```
 
 4.docker-compose常用命令
 ``` shell
