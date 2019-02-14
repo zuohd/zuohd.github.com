@@ -31,7 +31,7 @@ pip install docker-compose
 sudo docker-compose --version
 ```
 ### 二、Docker compose 相关
-1.启动容器编排，如果docker-compose.yml没在当前目录，需制定f参数：
+1.启动容器编排，如果docker-compose.yml没在当前目录，需指定f参数：
 ```shell
 sudo docker-compose up
 ```
