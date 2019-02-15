@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  Docker数据存储
-date:   2019-01-28 14:35:48 +0800
+date:   2019-01-29 14:35:48 +0800
 categories: technology
 tags: [Docker,Docker volume]
 ---
