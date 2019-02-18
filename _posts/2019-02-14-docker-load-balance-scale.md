@@ -5,7 +5,7 @@ date:   2019-02-14 09:08:48 +0800
 categories: technology
 tags: [Docker,Docker load balance]
 ---
-前面我们讲述了[Docker Compose 的使用](https://zuohd.github.io/technology/2019/01/28/docker-compose-using.html),这一次我们通过`docker-compose up --scale help`命令查看如何通过scale参数实现负载均衡。
+前面我们讲述了[Docker Compose 的使用](https://zuohd.github.io/technology/2019/01/30/docker-compose-using.html),这一次我们通过`docker-compose up --scale help`命令查看如何通过scale参数实现负载均衡。
 
 1.增加超时响应时间至120秒，扩展web容器为3个同时运行
 
