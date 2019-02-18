@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  Vagrant之多节点主机配置
-date:   2019-01-02 21:00:48 +0800
+date:   2019-01-03 21:00:48
 categories: technology
 tags: [Vagrant,虚拟机]
 ---
