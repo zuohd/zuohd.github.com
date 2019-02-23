@@ -3,7 +3,7 @@ layout: post
 title:  Docker端口映射
 date:   2019-01-27 17:49:48 +0800
 categories: technology
-tags: [Docker,DOCKER Port]
+tags: [Docker,Docker Port]
 ---
 
 运行一个nginx容器,命名为`webserver`，并将容器端口80映射到本机
