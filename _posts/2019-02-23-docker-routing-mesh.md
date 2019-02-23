@@ -44,8 +44,8 @@ rm -rf index.html
 wget whoami:8000
 more index.html #I'm e7f3923493fe
 ```
-此处 VIP 还担负了负载均衡的职能。
-# 体现为Ingress
+# 体现为Ingress负载均衡
+
 1.将 whoami 服务 scale 减少为2：
 
 ``` shell
