@@ -131,5 +131,5 @@ FWM  260 rr
   -> 10.255.0.8:0                 Masq    1      0          0
   -> 10.255.0.9:0                 Masq    1      0          0
 ```
-在部署 whoami 的 node2 机器我们执行`docker exec e7f3 ip a`，可以看到 ip 是 `10.255.0.9`
+在部署 whoami 的 node2 机器我们执行`docker exec e7f3 ip a`，可以看到 ip 是 `10.255.0.9`,
 在部署 whoami 的 node3 机器我们执行`docker exec 61b2 ip a`，可以看到 ip 是 `10.255.0.8`
