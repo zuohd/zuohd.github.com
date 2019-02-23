@@ -3,7 +3,7 @@ layout: post
 title:  Vagrant之多节点主机配置
 date:   2019-01-03 21:00:48
 categories: technology
-tags: [Vagrant,虚拟机]
+tags: [Vagrant,虚拟机,Docker]
 ---
 
 修改vagrantfile配置文件来达到目的:

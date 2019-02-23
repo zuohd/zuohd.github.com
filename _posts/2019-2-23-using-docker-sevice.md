@@ -3,7 +3,7 @@ layout: post
 title:  Docker Service命令使用
 date:   2019-02-23 09:08:48 +0800
 categories: technology
-tags: [Docker service,Docker swarm]
+tags: [Docker,Docker swarm]
 ---
 
 在集群环境下我们要使用`docker service`命令创建docker容器了

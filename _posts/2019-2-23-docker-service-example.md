@@ -3,7 +3,7 @@ layout: post
 title:  集群部署wordpress博客
 date:   2019-2-23 14:08:48 +0800
 categories: technology
-tags: [Docker service,Docker swarm]
+tags: [Docker,Docker swarm]
 ---
 前面我们提到docker swarm环境我们要使用`docker service`命令部署docker容器，今天我还以wordpress为例说明。
 

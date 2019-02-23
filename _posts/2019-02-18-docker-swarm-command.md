@@ -3,7 +3,7 @@ layout: post
 title:  Docker swarm搭建集群环境
 date:   2019-02-18 09:08:48 +0800
 categories: technology
-tags: [Docker 集群,Docker swarm]
+tags: [Docker,Docker swarm]
 ---
 
 Docker有多种方式用来建集群，这里我们采用其内置的`docker swarm`来看看其实现。
