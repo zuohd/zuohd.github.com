@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  集群部署wordpress博客
-date:   2019-2-23 14:08:48 +0800
+date:   2019-02-23 14:08:48 +0800
 categories: technology
 tags: [Docker,Docker swarm]
 ---
