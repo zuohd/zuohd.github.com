@@ -25,7 +25,14 @@ github_username:  zuohd
 markdown: kramdown
 theme: minima
 plugins:
+  - jekyll-paginate
   - jekyll-feed
+
+str_next_page: "下一页"  
+str_previous_page: "上一页"
+
+paginate: 5
+paginate_path: "page:num"
 
 header_pages:
   - about.md
