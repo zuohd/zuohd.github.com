@@ -5,7 +5,13 @@ date:   2019-01-30 17:08:48 +0800
 categories: technology
 tags: [Docker,Docker compose]
 ---
-### 一、安装Docker Compose
+
+*内容概览*
+
+* Do not remove this line (it will not be displayed)
+{:toc}
+
+# 一、安装Docker Compose
 
 仅Linux 平台，windows和mac不需要额外安装该组件,国内[daocloud][daocloud-link]提供了国内镜像速度稳定且较快。
 
@@ -15,29 +21,41 @@ tags: [Docker,Docker compose]
 sudo curl -L "https://github.com/docker/compose/releases/download/1.23.2/docker-compose-$(un
 ame -s)-$(uname -m)" -o /usr/local/bin/docker-compose
 ```
+
 ``` shell
 curl -L https://get.daocloud.io/docker/compose/releases/download/1.23.2/docker-compose-`uname -s`-`uname -m` > /usr/local/bin/docker-compose
 ```
+
 如果我们安装了pip,也可以通过pip安装
+
 ``` shell
 pip install docker-compose
 ```
+
 2.为docker compose应用执行权限
+
  ``` shell
  sudo chmod +x /usr/local/bin/docker-compose
  ``` 
+
 3.查看安装是否成功
+
 ``` shell
 sudo docker-compose --version
 ```
-### 二、Docker compose 相关
+
+# 二、Docker compose 相关
+
 1.启动容器编排，如果docker-compose.yml没在当前目录，需指定f参数：
+
 ```shell
 sudo docker-compose up
 ```
+
 2.docker-compose.yml文件内容如下，具体文件规则请参照[了解YAML][yaml-link]
 
 注意mysql卷目录应该提前建好，且不能跟其他版本mysql目录有冲突，否则会导致启动失败
+
 ``` docker-compose.yml
 version: '3'
 services:
@@ -68,6 +86,7 @@ networks:
     driver: bridge
 
 ```
+
 访问127.0.0.1:8090，浏览器会显示wordpress安装界面表示容器启动成功
 
 3.docker-compose 从本地构建镜像,新建一个目录，其下新建3个文件：
@@ -103,6 +122,7 @@ RUN pip install flask redis
 EXPOSE 5000
 CMD [ "python", "app.py" ]
 ```
+
 ~ docker-compose.yml:
 
 ``` docker-compose.yml
@@ -121,6 +141,7 @@ services:
 ```
 
 4.docker-compose常用命令
+
 ``` shell
 docker-compose ps #列出所有的services
 docker-compose down #删除docker-compose定义的所有资源并停止相关的service
@@ -133,6 +154,7 @@ docker-compose build #构建镜像
 docker-compose build --no-cache web #不带缓存的构建web服务，当我们修改了web程序的内容需要刷新缓存
 docker-compose config -q #验证（docker-compose.yml）文件配置，当配置正确时，不输出任何内容，当文件配置错误，输出错误信息。
 ```
+
 >参考来源
 
 [Docker-compose常用命令](https://www.cnblogs.com/moxiaoan/p/9299404.html)
