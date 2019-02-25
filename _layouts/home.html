@@ -28,10 +28,7 @@ layout: default
         {%- endfor -%}
     </ul>
     
-    <p class="feed-subscribe"><svg class="svg-icon orange">
-            <use xlink:href="{{ '/assets/minima-social-icons.svg#rss' | relative_url }}"></use>
-        </svg><a href="{{ "/feed.xml" | relative_url }}">Subscribe</a></p>
     {% include pagination.html %}
     {%- endif -%}
-
+    <p class="rss-subscribe">Subscribe <a href="{{ "/feed.xml" | relative_url }}">via RSS</a></p>
 </div>
