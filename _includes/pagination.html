@@ -5,11 +5,13 @@
     <a href="{{ paginator.previous_page_path | relative_url  }}">&laquo;
         {{site.str_previous_page}}
     </a>
+    {% else %}
+    <span>&laquo;{{site.str_previous_page}}</span>  
     {% endif %}
 
     {% for page in (1..paginator.total_pages) %}
     {% if page == paginator.page %}
-    <em>{{ page }}</em>
+    <span class="webjeda">{{ page }}</span>
     {% elsif page == 1 %}
     <a href="{{ paginator.previous_page_path | relative_url  }}">{{ page }}</a>
     {% else %}
