@@ -7,7 +7,7 @@
     display: inline-block;    
   }
 
-.pagination a {    
+.pagination a,.Previous-next a {    
     &:hover {
         background-color: #00c853;
         color: #fff;
