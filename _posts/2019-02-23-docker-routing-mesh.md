@@ -6,6 +6,10 @@ categories: technology
 tags: [Docker,Docker swarm]
 ---
 
+*内容概览*
+
+* Do not remove this line (it will not be displayed)
+{:toc}
 前面我们讲到当我们通过新建的 overlay driver 的网络后，docker swarm运用了VIP技术，那我们如何验证呢？
 
 # 体现为Internal
