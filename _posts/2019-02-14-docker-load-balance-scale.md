@@ -11,7 +11,6 @@ tags: [Docker,Docker load balance]
 
 ``` shell
 COMPOSE_HTTP_TIMEOUT=120 docker-compose up --scale web=3 -d
-
 ```
 
 2.docker-compose加入负载均衡器镜像
