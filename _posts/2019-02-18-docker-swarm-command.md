@@ -9,28 +9,27 @@ tags: [Docker,Docker swarm]
 Docker有多种方式用来建集群，这里我们采用其内置的`docker swarm`来看看其实现。
 集群环境可以通过我们前面的vagrant环境~Linux主机运行`docker-machine create hostname`~[play with docker](https://labs.play-with-docker.com)三种任选其一来搭建。
 
-
 1.这里我采用了vagrant方式加本机virtualbox建立了3台虚拟机，vagrant文件内容如下：
 
 ``` vagrantfile
 boxes = [
     {
         :name => "swarm-manager",
-		:hostname=>"node-1",
+        :hostname=>"node-1",
         :eth1 => "192.168.205.10",
         :mem => "1024",
         :cpu => "1"
     },
     {
         :name => "swarm-worker1",
-		:hostname=>"node-2",
+        :hostname=>"node-2",
         :eth1 => "192.168.205.11",
         :mem => "1024",
         :cpu => "1"
     },
-	{
+    {
         :name => "swarm-worker2",
-		:hostname=>"node-3",
+        :hostname=>"node-3",
         :eth1 => "192.168.205.12",
         :mem => "1024",
         :cpu => "1"
@@ -63,11 +62,11 @@ Vagrant.configure("2") do |config|
         end
 
         config.vm.network :private_network, ip: opts[:eth1]
-		config.vm.hostname = opts[:hostname]
+        config.vm.hostname = opts[:hostname]
       end
   end
 
-  config.vm.synced_folder "share", "/vagrant" 
+  config.vm.synced_folder "share", "/vagrant"
   config.vm.provision "shell", privileged: true, path: "./setup.sh"
   end
 ```
@@ -92,11 +91,13 @@ sudo systemctl start docker
 rm -rf get-docker.sh
 
 ```
+
 3.`vagrant ssh swarm-manager`进入node1主机执行
 
 ```shell
 docker swarm init --advertise-addr=192.168.205.10
 ```
+
 ip地址可以通过`ip a`查得
 
 4.依据上步执行结果进入node2,node3主机依次执行
@@ -105,11 +106,13 @@ ip地址可以通过`ip a`查得
 [vagrant@node-2 ~]$ docker swarm join --token SWMTKN-1-01q7bjyh8ev7ih3firurqdrx39ne7340s7x32d8pi9h5yv3luf-7gjs27sjue5it
 hxp93wubco4l 192.168.205.10:2377
 ```
+
 5.进入node1主机查看节点状态
 
 ```shell
 [vagrant@node-1 ~]$ docker node ls
 ```
+
 输出结果如下说明集群环境搭建成功
 
 ``` output

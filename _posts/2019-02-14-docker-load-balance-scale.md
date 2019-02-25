@@ -13,6 +13,7 @@ tags: [Docker,Docker load balance]
 COMPOSE_HTTP_TIMEOUT=120 docker-compose up --scale web=3 -d
 
 ```
+
 2.docker-compose加入负载均衡器镜像
 
 ``` docker-compose.yml
@@ -38,7 +39,9 @@ services:
       - /var/run/docker.sock:/var/run/docker.sock
 
 ```
+
 3.修改app.py为监听80端口
+
 ``` python
 from flask import Flask
 from redis import Redis
@@ -55,6 +58,7 @@ if __name__ == "__main__":
     app.run(host="0.0.0.0", port=80, debug=True)
 
 ```
+
 4.修改Dockerfile暴露80端口
 
 ``` Dockerfile
@@ -63,15 +67,17 @@ LABEL maintainer="soderberg zuo<zuo.houde@gmail.com>"
 COPY . /app
 WORKDIR /app
 RUN pip install flask redis
-EXPOSE 80                     
+EXPOSE 80
 CMD [ "python", "app.py" ]
 
 ```
+
 5.启动容器
 
 ``` shell
 docker-compose up --scale web=3 -d
 ```
+
 6.查看结果我们会发现每次输出不同的web主机名
 
 ``` shell
@@ -97,23 +103,18 @@ Hello Docker World! I have been seen 7 times and hostname is c3a300e25680.
 Hello Docker World! I have been seen 8 times and hostname is d476a12585a4.
 Hello Docker World! I have been seen 9 times and hostname is c2d3cb4c54aa.
 Hello Docker World! I have been seen 10 times and hostname is c3a300e25680.
-
 ```
+
 如果我们想减少服务运行个数可以重新执行docker-compose 命令,将web服务个数设置为1
 
- ``` shell
- docker-compose up --scale web=1 -d
+``` shell
+docker-compose up --scale web=1 -d
+```
 
- ```
  此时执行`docker-compose ps`查看服务个数发现web已经缩减：
 
- ``` output
-      Name                  Command            State             Ports          
---------------------------------------------------------------------------------
-lb-scale_lb_1      /sbin/tini --               Up      1936/tcp, 443/tcp,       
-                   dockercloud- ...                    0.0.0.0:8080->80/tcp     
-lb-scale_redis_1   docker-entrypoint.sh        Up      6379/tcp                 
-                   redis ...                                                    
-lb-scale_web_1     python app.py               Up      80/tcp  
- ```
- 
+|Name|Command|State|Ports|
+|-|:-:|:-:|-:|
+|lb-scale_lb_1| /sbin/tini --dockercloud-docker-entrypoint.sh ... |Up| 1936/tcp, 443/tcp, 0.0.0.0:8080->80/tcp|
+|lb-scale_redis_1|redis ... |Up|6379/tcp|
+|lb-scale_web_1|python app.py|Up|80/tcp|
