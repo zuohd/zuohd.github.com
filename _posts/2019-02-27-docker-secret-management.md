@@ -74,14 +74,14 @@ services:
         delay: 10s
 
   mysql:
-    image: mysql
+    image: mysql:5.7
     secrets:
       - my-pw
     environment:
       MYSQL_ROOT_PASSWORD_FILE: /run/secrets/my-pw
       MYSQL_DATABASE: wordpress
     volumes:
-      - mysql-data:/var/lib/mysql
+      - mysql-data:/var/lib/mysql57
     networks:
       - my-network
     deploy:
