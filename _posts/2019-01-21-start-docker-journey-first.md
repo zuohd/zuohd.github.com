@@ -61,8 +61,7 @@ docker container ls
 5.参考[Docker pull 出现的TLS handshake timeout][docker-pull-tls-handshake-timeout]执行以下命令加速docker镜像下载
 
 ``` shell
-echo "DOCKER_OPTS=\"\$DOCKER_OPTS --registry-mirror=http://f2d6cb40.m.daocloud.io\"" | sudo tee -a /etc/default/d
-ocker
+echo "DOCKER_OPTS=\"\$DOCKER_OPTS --registry-mirror=http://f2d6cb40.m.daocloud.io\"" | sudo tee -a /etc/default/docker
 ```
 
 6.获取docker镜像，如nginx
