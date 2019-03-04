@@ -115,5 +115,7 @@ docker-deploy:
     - docker run -d -p 5000:5000 --name web flask-demo
   tags:
     - demo
+  only:
+    - master
 
 ```
