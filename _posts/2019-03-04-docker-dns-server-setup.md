@@ -77,9 +77,12 @@ Verifying runner... is alive                        runner=M1kW56Sn
 好了，现在我们在gitlab项目上添加`.gitlab-ci.yml` 文件：
 
 ``` yaml
+
 stages:
   - style
   - test
+  - deploy
+  
 pep8:
   stage: style
   script:
@@ -103,4 +106,14 @@ unittest-py34:
     - tox -e py34
   tags:
     - python3.4
+
+docker-deploy:
+  stage: deploy
+  script:
+    - docker build -t flask-demo .
+    - if [ $(docker ps -aq --filter name=web) ]; then docker rm -rf web;fi
+    - docker run -d -p 5000:5000 --name web flask-demo
+  tags:
+    - demo
+
 ```
