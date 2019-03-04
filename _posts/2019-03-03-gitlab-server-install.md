@@ -57,7 +57,7 @@ sudo EXTERNAL_URL="http://gitlab.example.com" yum install -y gitlab-ce
 sudo gitlab-ctl reconfigure
 ```
 
-可以通过`sudo gitlabctl status` 查看 GitLab 进程状态。
+可以通过`sudo gitlab-ctl status` 查看 GitLab 进程状态。
 本地访问 http://gitlab.example.com ，修改 root 的密码，再次登录后，新建 group 和 project，加入一些文件，用`git clone`看看可否下载 repository。
 
 我们还可以进入 GitLab 服务器执行`sudo vim /etc/gitlab/gitlab.rb`，通过修改其 external_url 值可以更新我们的域名，别忘了最后要执行`sudo gitlab-ctl reconfigure`才可以使得更改生效。

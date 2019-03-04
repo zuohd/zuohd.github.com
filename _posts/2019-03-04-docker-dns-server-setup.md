@@ -32,7 +32,7 @@ docker restart dns
 4.进入gitlab-ci的node3 主机，执行
 
 ``` shell
-vi /etc/resolv.conf #Add nameserver 192.168.205.11
+vi /etc/resolv.conf #Add nameserver 192.168.205.11,it seems just keep it so that it works!!
 ```
 
 此处的 IP 是运行DNS服务容器的宿主机 IP，执行`ping gitlab.example.com`测试，如果成功说明 dns 服务配置成功。
