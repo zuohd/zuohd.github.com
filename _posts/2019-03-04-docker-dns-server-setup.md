@@ -114,8 +114,8 @@ docker-deploy:
     - if [ $(docker ps -aq --filter name=web) ]; then docker rm -rf web;fi
     - docker run -d -p 5000:5000 --name web flask-demo
   tags:
-    - demo
+    - test  #test是shell类型的runner
   only:
-    - master
+    - master #只有master分支变化，才做CD部署操作
 
 ```
