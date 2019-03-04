@@ -6,8 +6,7 @@ categories: technology
 tags: [Devops,Production Release]
 ---
 
-按照 gitflow的流程，任何人不能随意改动 master 分支，进入 project》settings>repository>proteted Branches 更改为 NO ONE，然后设置 project》settings>general>Merge Request,选择“docker run -d -v /opt/registry:/var/lib/registry -p 5000:5000 --restart=always --name registry registry:2”。
-以后我们增加功能都在其他分支开发，如 dev 分支，push 之后再进入 gitlab 选择 “creat merge request”创建一个合并请求。
+按照 gitflow的流程，任何人不能随意改动 master 分支，进入 project》settings>repository>proteted Branches 更改为 NO ONE，然后设置 project》settings>general>Merge Request,选择“Only allow merge requests to be merged if the pipeline succeeds”。以后我们增加功能都在其他分支开发，如 dev 分支，push 之后再进入 gitlab 选择 “creat merge request”创建一个合并请求。
 
 产品发布新的版本时，我们希望在为 master 分支打个 release tag，然后将最新的 image 推送到内部 docker registry。而生产环境从 docker registry 获取最新的镜像，手动或自动的实现 service 更新。
 
