@@ -27,7 +27,7 @@ tags: [自我提升]
 
 **5. 到一些开源网站社区关注所学技术**
 
-如著名的[gitHub](https://github.com/),follow也好，star也好，如有余力还可以参与其中反馈社区。
+如著名的[gitHub](https://github.com/),follow也好，star也好，从中你可以阅读到优秀的程序代码段落，如有余力还可以参与其中反馈社区。
 
 **6. 乐于分享**
 
