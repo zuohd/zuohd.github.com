@@ -1,0 +1,40 @@
+---
+layout: post
+title: LeetCode 游戏
+permalink: /leetcode/
+---
+<p>最近开始学习极客专栏的算法，为了对博客不造成污染，特将 LeetCode 题目列表记录一下，方式借鉴参考了
+  <a href="http://www.hikean.com/leetcode/">Keans' Blog</a>,在此要表示感谢。</p>
+
+<table id="problem_list" align="center" class="tablesorter">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Title</th>
+        <th>Acceptance</th>
+        <th>Difficulty</th>
+        <th>Editorial</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for item in site.data.leetcode_data.algorithms %} {% if item.editorial != 'locked' %}
+      <tr>
+        <td>{{item.id}}</td>
+        <td>
+          <a href="https://leetcode.com/problems/{{item.url}}/">{{item.title}}</a>
+        </td>
+        <td>{{item.acceptance}}</td>
+        <td>{{item.difficulty}}</td>
+        <td>
+          {% if item.editorial == true %}
+          <span class="span-link">
+            <a href="/leetcode/{{item.id}}-{{item.url}}/">Resolved</a>
+          </span>
+          {% elsif item.editorial == false %}
+          Unresolved
+          {% endif %}
+        </td>
+      </tr>
+      {% endif %} {% endfor%}
+    </tbody>
+  </table>

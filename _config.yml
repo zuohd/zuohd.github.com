@@ -37,7 +37,7 @@ paginate_path: "/page/:num/"
 header_pages:
   - about.md
   - tags.html
-  - archives.html
+  - archives.html  
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
 # to override the default setting.
@@ -49,3 +49,8 @@ header_pages:
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
+
+collections:
+  leetcode:
+    output: true
+    permalink: /leetcode/:path/
