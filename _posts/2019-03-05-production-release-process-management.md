@@ -26,7 +26,7 @@ stages:
 pep8:
   stage: style
   script:
-    - pip install tox
+    - pip install tox -i https://pypi.tuna.tsinghua.edu.cn/simple
     - tox -e pep8
   tags:
     - python2.7
@@ -36,7 +36,7 @@ pep8:
 unittest-py27:
   stage: test
   script:
-    - pip install tox
+    - pip install tox -i https://pypi.tuna.tsinghua.edu.cn/simple
     - tox -e py27
   tags:
     - python2.7
@@ -46,7 +46,7 @@ unittest-py27:
 unittest-py34:
   stage: test
   script:
-    - pip install tox
+    - pip install tox -i https://pypi.tuna.tsinghua.edu.cn/simple
     - tox -e py34
   tags:
     - python3.4
