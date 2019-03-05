@@ -14,7 +14,15 @@ tags: [Devops,Production Release]
 
 1.参照[搭建 Docker DNS服务器](https://zuohd.github.io/technology/2019/03/03/docker-dns-server-setup.html)将 registry.example.com 映射到本地host 主机，host主机运行`docker run -d -v /opt/registry:/var/lib/registry -p 5000:5000 --restart=always --name registry registry:2`即可。
 
-2.编辑`.gitlab-ci.yml`:
+2.为了使用docker私有镜像源，我们需要增加一个daemon.json文件
+
+``` shell
+vim  /etc/docker/daemon.json # Add {"insecure-registries":["registry.example.com:5000"]}
+systemctl daemon-reload
+systemctl restart docker
+```
+
+然后编辑`.gitlab-ci.yml`:
 
 ``` yaml
 stages:
@@ -58,7 +66,7 @@ docker-deploy:
   script:
     - docker build -t registry.example.com:5000/flask-demo .
     - docker push registry.example.com:5000/flask-demo
-    - if [ $(docker ps -aq --filter name=web) ]; then docker rm -rf web;fi
+    - if [ $(docker ps -aq --filter name=web) ]; then docker rm -f web;fi
     - docker run -d -p 6000:5000 --name web registry.example.com:5000/flask-demo
   tags:
     - demo

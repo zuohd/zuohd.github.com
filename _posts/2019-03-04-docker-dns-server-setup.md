@@ -86,7 +86,7 @@ stages:
 pep8:
   stage: style
   script:
-    - pip install tox
+    - pip install tox -i https://pypi.tuna.tsinghua.edu.cn/simple
     - tox -e pep8
   tags:
     - python2.7
@@ -94,7 +94,7 @@ pep8:
 unittest-py27:
   stage: test
   script:
-    - pip install tox
+    - pip install tox -i https://pypi.tuna.tsinghua.edu.cn/simple
     - tox -e py27
   tags:
     - python2.7
@@ -102,7 +102,7 @@ unittest-py27:
 unittest-py34:
   stage: test
   script:
-    - pip install tox
+    - pip install tox -i https://pypi.tuna.tsinghua.edu.cn/simple
     - tox -e py34
   tags:
     - python3.4
@@ -111,7 +111,7 @@ docker-deploy:
   stage: deploy
   script:
     - docker build -t flask-demo .
-    - if [ $(docker ps -aq --filter name=web) ]; then docker rm -rf web;fi
+    - if [ $(docker ps -aq --filter name=web) ]; then docker rm -f web;fi
     - docker run -d -p 5000:5000 --name web flask-demo
   tags:
     - test  #test是shell类型的runner
