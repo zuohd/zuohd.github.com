@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  Vim编辑器配置脚本以及常用快捷方式技巧
+title:  Vim编辑器配置及常用命令
 date:   2018-08-01 18:35:48 +0800
 categories: soft-skills
 tags: [vim]
