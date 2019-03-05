@@ -75,3 +75,5 @@ docker-image-release:
   only:
     - tags # 只在tag变化时执行
 ```
+
+我们可以刷新 http://registry.example.com:5000/v2/flask-demo/tags/list 来验证容器是否构建成功。
