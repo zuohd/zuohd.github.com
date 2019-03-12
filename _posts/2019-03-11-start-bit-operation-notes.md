@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  位运算笔记 
+title:  位运算学习笔记 
 date:   2019-03-11 08:35:48 +0800
 categories: technology
 tags: [算法]
