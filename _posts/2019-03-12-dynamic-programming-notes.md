@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 动态规划注解 
-date:   2019-03-12 22:35:48 +0800
+date: 2019-03-12 22:35:48 +0800
 categories: technology
 tags: [算法]
 ---
