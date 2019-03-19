@@ -132,17 +132,19 @@ public class SomeType : IDisposable
 
 Dispose需要手动调用，在.NET中有两种调用方式：
 
-```c#
-#方式1：显示接口调用
+```c-sharp
+
+#方式1-显示接口调用
 SomeType st1=new SomeType();
 //do sth
 st1.Dispose();
 
-#方式2：using()语法调用，自动执行Dispose接口
+#方式2-using()语法调用，自动执行Dispose接口
 using (var st2 = new SomeType())
 {
     //do sth
 }
+
 ```
 
 第一种方式，显示调用，缺点显而易见，如果程序猿忘了调用接口，则会造成资源得不到释放。或者调用前出现异常，当然这一点可以使用try…finally避免。
