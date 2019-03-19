@@ -107,7 +107,7 @@ public class User
 - 第1代，0代满了会触发0代的垃圾回收，0代垃圾回收后，剩下的对象会搬到1代。 
 - 第2代，当0代、1代满了，会触发0代、1代的垃圾回收，第0代升为第1代，第1代升为第2代。
 
-![GC generation](https://images.cnblogs.com/cnblogs_com/riccc/dotnet/net-mem-06-generation.png)
+![GC generation](/assets/dotnenet-mem-06-generation.png)
 大部分情况，GC只需要回收0代即可，这样可以显著提高GC的效率，而且GC使用启发式内存优化算法，自动优化内存负载，自动调整各代的内存大小
 
 ## 非托管资源回收
