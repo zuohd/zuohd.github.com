@@ -7,7 +7,7 @@ tags: [Linux shell]
 
 ---
 >实现将/home/shell/homework/logs目录下所有当前周生成的log文件备份至/home/shell/homework/currentweeklogs,不能改变源文件的创建修改日期，每周日备份。
-                
+
 1.新建shell文件cpweeklogs.sh
 
 ``` shell
@@ -32,6 +32,7 @@ done
 cp_current_week_logs /home/shell/homework/logs
 
 ```
+
 2.`crontab -e` 进入cron定时任务编辑模式,此处记得为cpweeklogs.sh 赋予执行权限
 
 ``` shell
@@ -40,8 +41,9 @@ cp_current_week_logs /home/shell/homework/logs
 ```
 
 3.可通过查看/var/log/cron 文件验证监控定时任务是否正常执行
-                
+
 ``` shell
+
 cd /var/log
 cat cron
 
