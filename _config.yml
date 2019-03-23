@@ -54,3 +54,7 @@ collections:
   leetcode:
     output: true
     permalink: /leetcode/:path/
+  design-pattens:
+    output: true
+    permalink: /design-pattens/:path/
+

@@ -1,0 +1,20 @@
+pattens:
+  - id: 1
+    title: 单例模式(Singleton)    
+    editorial: true 
+    url: singleton
+
+  - id: 2
+    title: 简单工厂模式
+    editorial: true
+    url: simple-factory
+
+  - id: 3
+    title: 工厂模式
+    editorial: true
+    url: factory
+
+  - id: 4
+    title: 抽象工厂模式
+    editorial: true
+    url: abstract-factory

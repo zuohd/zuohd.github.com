@@ -1,0 +1,37 @@
+---
+layout: post
+title: 设计模式总结
+tags: [Design Pattens]
+permalink: /design-pattens/
+---
+<p>之前看了一些设计模式相关的书，感觉没用起来，而且属于记不住的知识点，但又很重要。为了对博客不造成污染，特将设计模式列表记录一下，方式借鉴参考了
+  <a href="http://www.hikean.com/leetcode/">Keans' Blog</a>,在此要表示感谢，该系列将随着思考的深入不断更新完善。</p>
+
+<table id="design_patten_list" align="center" class="tablesorter">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Title</th>        
+        <th>Editorial</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for item in site.data.design_pattens_data.pattens %} {% if item.editorial != 'locked' %}
+      <tr>
+        <td>{{item.id}}</td>
+        <td>
+          {{item.title}}
+        </td>        
+        <td>
+          {% if item.editorial == true %}
+          <span class="span-link">
+            <a href="/design-pattens/{{item.id}}-{{item.url}}/">Resolved</a>
+          </span>
+          {% elsif item.editorial == false %}
+          Unresolved
+          {% endif %}
+        </td>
+      </tr>
+      {% endif %} {% endfor%}
+    </tbody>
+  </table>
