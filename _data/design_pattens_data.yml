@@ -5,16 +5,111 @@ pattens:
     url: singleton
 
   - id: 2
-    title: 简单工厂模式
-    editorial: true
+    title: 简单工厂模式(Simple Factory)
+    editorial: false
     url: simple-factory
 
   - id: 3
-    title: 工厂模式
-    editorial: true
+    title: 工厂方法模式(Factory Method)
+    editorial: false
     url: factory
 
   - id: 4
-    title: 抽象工厂模式
-    editorial: true
+    title: 抽象工厂模式(Abstract Factory)
+    editorial: false
     url: abstract-factory
+
+  - id: 5
+    title: 建造者模式(Builer)
+    editorial: false
+    url: builder 
+
+  - id: 6
+    title: 原型模式(Prototype)
+    editorial: false
+    url: prototype
+    
+  - id: 7
+    title: 适配器模式(Adapter)
+    editorial: false
+    url: adapter
+
+  - id: 8
+    title: 桥接模式(Bridge)
+    editorial: false
+    url: bridge
+
+  - id: 9
+    title: 装饰者模式(Decorator)
+    editorial: false
+    url: decorator
+
+  - id: 10
+    title: 组合模式(Composite)
+    editorial: false
+    url: composite
+
+  - id: 11
+    title: 外观模式(Facade)
+    editorial: false
+    url: facade
+
+  - id: 12
+    title: 享元模式(Flyweight)
+    editorial: false
+    url: flyweight
+
+  - id: 13
+    title: 代理模式(Proxy)
+    editorial: false
+    url: proxy
+
+  - id: 14
+    title: 模板方法模式(Template Method)
+    editorial: false
+    url: template-method
+
+  - id: 15
+    title: 命令模式(Command)
+    editorial: false
+    url: command
+
+  - id: 16
+    title: 迭代器模式(Iterator)
+    editorial: false
+    url: iterator
+
+  - id: 17
+    title: 观察者模式(Observer)
+    editorial: false
+    url: observer
+
+  - id: 18
+    title: 中介者模式(Mediator)
+    editorial: false
+    url: mediator
+
+  - id: 19
+    title: 状态者模式(State)
+    editorial: false
+    url: state
+
+  - id: 20
+    title: 策略者模式(Stragety)
+    editorial: false
+    url: stragety
+
+  - id: 21
+    title: 责任链模式(Chain Of Responsibility)
+    editorial: false
+    url: chain-of-responsibility
+
+  - id: 22
+    title: 访问者模式(Visitor)
+    editorial: false
+    url: visitor
+
+  - id: 23
+    title: 备忘录模式(Memento)
+    editorial: false
+    url: memento
