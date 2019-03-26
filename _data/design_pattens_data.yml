@@ -6,7 +6,7 @@ pattens:
 
   - id: 2
     title: 简单工厂模式(Simple Factory)
-    editorial: false
+    editorial: true
     url: simple-factory
 
   - id: 3

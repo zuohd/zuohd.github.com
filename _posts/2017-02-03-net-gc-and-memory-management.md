@@ -107,7 +107,7 @@ public class User
 - 第1代，0代满了会触发0代的垃圾回收，0代垃圾回收后，剩下的对象会搬到1代。 
 - 第2代，当0代、1代满了，会触发0代、1代的垃圾回收，第0代升为第1代，第1代升为第2代。
 
-![GC generation](/assets/net-mem-06-generation.png)
+![GC generation](/assets/images/net-mem-06-generation.png)
 
 大部分情况，GC只需要回收0代即可，这样可以显著提高GC的效率，而且GC使用启发式内存优化算法，自动优化内存负载，自动调整各代的内存大小
 
@@ -150,7 +150,7 @@ using (var st2 = new SomeType())
 第一种方式，显示调用，缺点显而易见，如果程序猿忘了调用接口，则会造成资源得不到释放。或者调用前出现异常，当然这一点可以使用try…finally避免。
 
 一般都建议使用第二种实现方式，他可以保证无论如何Dispose接口都可以得到调用，原理其实很简单，using()的IL代码如下图，因为using只是一种语法形式，本质上还是try…finally的结构。
-![using IL](https://images2015.cnblogs.com/blog/151257/201603/151257-20160309235625475-414934067.png)
+![using IL](/assets/images/net-using-il-code.png)
 
 ### Finalize() ：终结器（析构函数）
 

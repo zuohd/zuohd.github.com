@@ -46,7 +46,7 @@ Singleton 类通过定义一个私有变量 uniqueInstance 来记录单例类的
 
 这段代码在单线程中不存在问题，但在多线程中的静态方法对变量操作时会得到多个 Singleton 实例，因为在两个线程同时运行 GetInstance方法时，此时两个线程判断(uniqueSingleton is null)均为真，这时候两个线程都会创建 Singleton的实例，违背了单例模式的初衷，解决的方法之一就是加锁，方法如下：
 
-```CSharp
+```csharp
     public class Singleton
     {
         private static Singleton uniqueSingleton;
@@ -73,7 +73,7 @@ Singleton 类通过定义一个私有变量 uniqueInstance 来记录单例类的
 
 上面的代码确实可以解决多线程安全的问题，但如果我们能再思考一下，只要第一个线程创建了 Singleton实例，那么后面的就只需要判断 uniqueSingleton 是否为空即可，上面的方法增加了系统开销，损失了性能，这里我们再加入一层判断，如果 uniqueSington为空再进入加锁的流程，改进代码如下：
 
-```CSharp
+```csharp
     public class Singleton
     {
         private static Singleton uniqueSingleton;
