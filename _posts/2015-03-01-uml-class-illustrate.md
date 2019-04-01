@@ -64,7 +64,7 @@ public class Employee
 
 实现关系表示的是类与接口的关系，类实现的接口，如下图：
 
-![实现关系](https://www.plantuml.com/plantuml/svg/SoWkIImgAStDuU8goIp9ILNmp2j9BKfBJ4ujLj1LSCv9B2vMSCbCJ2zApEM2WaoO2WNFaCIAu9AYnFJKaagkPB3QWDJY_Bp474m9Lv2kWgBCubHaEMGJR6fqTR7fnr23tIWWS4ZDIm5w1G00)
+![实现关系](http://www.plantuml.com/plantuml/png/SoWkIImgAStDuIh9BCb9LV3CAqajIajCJYrMq5LmpaaiBbPmoKnCBqhCvSg4IW4LXIHM19SK9QQdbbHo9OCL1QGMv-Sbvc1Ak89q5HHb5gSYoo6RO5EZfmVJZqyD3gCSKlDIWEu70000)
 
 ### 关联
 
