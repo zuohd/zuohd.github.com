@@ -104,6 +104,17 @@ namespace AbstractFactoryPatten
 
 ```
 
+客户端测试代码如下：
+
+```csharp
+var bmwCarFactory=new BMWFactory();
+Assert.AreEqual("BMWCover",bmwCarFactory.MakeCover().Make());
+Assert.AreEqual("BMWWheel",bmwCarFactory.MakeWheel().Make());
+var bydCarFactory=new BYDFactory();
+Assert.AreEqual("BYDCover",bydCarFactory.MakeCover().Make());
+Assert.AreEqual("BYDWheel",bydCarFactory.MakeWheel().Make());
+```
+
 ## 总结
 
 .NET中实现抽象工厂模式的例子就是`System.Data.Common.DbProviderFactory`，为了连接多种类型的数据库，每一个都有实现类，如`SqlClientFactory`就是处理 SQL Server 相关操作方法的类。
