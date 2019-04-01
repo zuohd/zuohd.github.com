@@ -25,7 +25,7 @@ pattens:
 
   - id: 5
     category: 创建型
-    title: 建造者模式(Builer)
+    title: 建造者模式(Builder)
     editorial: false
     url: builder 
 
