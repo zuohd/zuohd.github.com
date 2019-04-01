@@ -11,8 +11,8 @@ permalink: /design-pattens/
     <thead>
       <tr>
         <th>ID</th>
-        <th>分类</th>
-        <th>模式名称</th>        
+        <th>模式名称</th>
+        <th>类别</th>        
         <th>实现</th>
       </tr>
     </thead>
@@ -20,9 +20,7 @@ permalink: /design-pattens/
       {% for item in site.data.design_pattens_data.pattens %} {% if item.editorial != 'locked' %}
       <tr>
         <td>{{item.id}}</td>
-        <td>
-          {{item.title}}
-        </td>
+        <td>{{item.title}}</td>
         <td>{{item.category}}</td>        
         <td>
           {% if item.editorial == true %}
