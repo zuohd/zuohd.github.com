@@ -104,7 +104,7 @@ namespace AbstractFactoryPatten
 
 ```
 
-客户端测试代码如下：
+单元测试代码如下：
 
 ```csharp
 var bmwCarFactory=new BMWFactory();
