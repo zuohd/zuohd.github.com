@@ -5,14 +5,15 @@ tags: [Design Pattens]
 permalink: /design-pattens/
 ---
 <p>之前看了一些设计模式相关的书，感觉没用起来，而且属于记不住的知识点，但又很重要。为了对博客不造成污染，特将设计模式列表记录一下，方式借鉴参考了
-  <a href="http://www.hikean.com/leetcode/">Keans' Blog</a>,在此要表示感谢，该系列将随着思考的深入不断更新完善。</p>
+  <a href="http://www.hikean.com/leetcode/">Keans' Blog</a>,在此要表示感谢。该系列将随着思考的深入不断更新完善。每个分类下的模式关注点不同：创建型模式关注于对象的创建同时隐藏创建逻辑；结构型模式关注类和对象的组合；行为型模式关注点在于对象之间的组合。</p>
 
 <table id="design_patten_list" align="center" class="tablesorter">
     <thead>
       <tr>
         <th>ID</th>
-        <th>Title</th>        
-        <th>Editorial</th>
+        <th>分类</th>
+        <th>模式名称</th>        
+        <th>实现</th>
       </tr>
     </thead>
     <tbody>
@@ -21,7 +22,8 @@ permalink: /design-pattens/
         <td>{{item.id}}</td>
         <td>
           {{item.title}}
-        </td>        
+        </td>
+        <td>{{item.category}}</td>        
         <td>
           {% if item.editorial == true %}
           <span class="span-link">
