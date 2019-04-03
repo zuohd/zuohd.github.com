@@ -116,7 +116,7 @@ pattens:
   - id: 20
     category: 行为型
     title: 策略者模式(Stragety)
-    editorial: false
+    editorial: true 
     url: stragety
 
   - id: 21
