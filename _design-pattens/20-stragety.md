@@ -14,3 +14,5 @@ tags: [Stragety, Design Patten]
 ## UML 图
 
 ## 代码实现
+
+## 总结
