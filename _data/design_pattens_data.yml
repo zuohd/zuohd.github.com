@@ -98,7 +98,7 @@ pattens:
   - id: 17
     category: 行为型
     title: 观察者模式(Observer)
-    editorial: false
+    editorial: true
     url: observer
 
   - id: 18
