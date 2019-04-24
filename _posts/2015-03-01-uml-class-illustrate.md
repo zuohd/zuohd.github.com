@@ -216,9 +216,31 @@ namespace ClassDiagram
 
 ### 依赖
 
-最后再来说说依赖关系，也就是一个类与另一个类是调用关系，即一个类的实现需要另外一个类的协助，实际代码中我们应该避免互相依赖。依赖关系用带箭头的虚线表示，箭头指向被调用者，如下图：
+最后再来说说依赖关系，也就是一个类与另一个类是调用关系，即一个类的实现需要另外一个类的协助，实际代码中我们应该避免互相依赖。一般来说，被依赖的对象的往往是以局部变量、方法参数的形式存在于对象中，与关联关系不同，它不会以成员变量的形式存在于依赖对象中，每一个依赖都有一个名称。依赖关系用带箭头的虚线表示，箭头指向被依赖的对象，如下图：
 
 ![依赖](http://www.plantuml.com/plantuml/png/SoWkIImgAStDuN9KqDEpKt1Ii59mJip9uN98pKi12WC0)
+
+```csharp
+namespace DesignPattens
+{
+    public class B
+    {
+        public string OutputString()
+        {
+            return "foo";
+        }
+    }
+
+    public class A
+    {
+        public void Call(B b)
+        {
+            var bar = b.OutputString();
+            //Other opearations
+        }
+    }
+}
+```
 
 ## 各种关系的强弱关系
 
