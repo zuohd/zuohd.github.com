@@ -92,7 +92,7 @@ pattens:
   - id: 16
     category: 行为型
     title: 迭代器模式(Iterator)
-    editorial: false
+    editorial: true 
     url: iterator
 
   - id: 17
