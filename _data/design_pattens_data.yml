@@ -38,7 +38,7 @@ pattens:
   - id: 7
     category: 结构型
     title: 适配器模式(Adapter)
-    editorial: false
+    editorial: true
     url: adapter
 
   - id: 8
