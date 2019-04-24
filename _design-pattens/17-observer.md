@@ -206,4 +206,5 @@ namespace DesignPattens.Tests
     }
 }
 ```
+
 由此可以看出语言内部实现的方式精简了代码。
