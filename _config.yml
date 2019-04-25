@@ -35,9 +35,10 @@ paginate: 8
 paginate_path: "/page/:num/"
 
 header_pages:
-  - about.md
   - tags.html
   - archives.html  
+  - bookshelf.md
+  - about.md
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
 # to override the default setting.
