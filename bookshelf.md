@@ -11,6 +11,7 @@ permalink: /books/
 方法
 
 - [敏捷革命](2018/11/09/Read-Agile-resolution.html)
+- [How to read a book(推荐英文版)](http://vdisk.weibo.com/s/dduGEXzXR5mx)
 
 逻辑
 
@@ -22,4 +23,7 @@ permalink: /books/
 
 美学
 
-其他
+育儿
+
+-[从书生到三岁](https://book.douban.com/subject/1967845/)
+-[斯波克育儿经](https://book.douban.com/subject/2276901/)
