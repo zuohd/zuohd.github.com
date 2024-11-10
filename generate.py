@@ -5,6 +5,7 @@ from os.path import exists
 def get_filename(qid, url, category="algorithms"):
     return "./_leetcode/{}-{}.md".format(qid, url)
 
+
 def format_item(item):
     mapping = {
         "frontend_question_id": "id",
@@ -43,5 +44,6 @@ def get_string(category="algorithms"):
     out_data = [format_item(item) for item in all_datas["stat_status_pairs"]]
     out_string = "{}:\n".format(category) + "\n\n".join([output_item(item) for item in out_data][::-1])
     return out_string
+
 
 print(get_string())
