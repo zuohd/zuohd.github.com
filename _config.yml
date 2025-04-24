@@ -24,6 +24,9 @@ github_username:  zuohd
 # Build settings
 markdown: kramdown
 theme: minima
+sass:
+  style: compressed
+  implementation: sass-embedded
 plugins:
   - jekyll-paginate
   - jekyll-feed
