@@ -27,7 +27,30 @@ layout: default
         </li>
         {%- endfor -%}
     </ul>
-    
+    <style type="text/css">
+        .pagination a, .pagination span {
+          padding: 7px 18px;
+          border: 1px solid #eee;
+          margin-left: -2px;
+          margin-right: -2px;
+          background-color: #ffffff;
+          display: inline-block;    
+        }
+      
+      .pagination a,.Previous-next a {    
+          &:hover {
+              background-color: #00c853;
+              color: #fff;
+          }
+       }
+       .next {
+          float: right;
+      }
+      
+      .pagination {
+          margin-bottom: 15px;   
+       }
+      </style>
     {% include pagination.html %}
     {%- endif -%}
     <p class="rss-subscribe">Subscribe <a href="{{ "/feed.xml" | relative_url }}">via RSS</a>
