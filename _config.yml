@@ -28,6 +28,7 @@ sass:
   sass_dir: assets/css
   style: compressed
   implementation: sass-embedded
+  quiet_deps: true
 plugins:
   - jekyll-paginate
   - jekyll-feed

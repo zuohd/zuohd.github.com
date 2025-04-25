@@ -18,13 +18,32 @@ layout: default
   <div class="post-content e-content" itemprop="articleBody">
     {{ content }}
   </div>
-
-  {%- if site.disqus.shortname -%}
-    {%- include disqus_comments.html -%}
-  {%- endif -%}
-
   <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
 </article>
+<style type="text/css">
+  .pagination a, .pagination span {
+    padding: 7px 18px;
+    border: 1px solid #eee;
+    margin-left: -2px;
+    margin-right: -2px;
+    background-color: #ffffff;
+    display: inline-block;    
+  }
+
+.pagination a,.Previous-next a {    
+    &:hover {
+        background-color: #00c853;
+        color: #fff;
+    }
+ }
+ .next {
+    float: right;
+}
+
+.pagination {
+    margin-bottom: 15px;   
+ }
+</style>
 <div class="Previous-next">
         {% if page.previous.url %}
           <a class="previous" href="{{page.previous.url}}">&laquo; {{page.previous.title}}</a>
@@ -33,3 +52,21 @@ layout: default
           <a class="next" href="{{page.next.url}}">{{page.next.title}} &raquo;</a>
         {% endif %}
 </div>
+<!-- Giscus 评论容器 -->
+<div id="giscus"></div>
+<!-- 引入 Giscus 的 JavaScript 文件 -->
+<script src="https://giscus.app/client.js"
+        data-repo="zuohd/giscus-demo"
+        data-repo-id="R_kgDOOfvy5A"
+        data-category="Announcements"
+        data-category-id="DIC_kwDOOfvy5M4Cpd8P"
+        data-mapping="pathname"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="top"
+        data-theme="light"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
