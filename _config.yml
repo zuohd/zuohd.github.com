@@ -25,6 +25,7 @@ github_username:  zuohd
 markdown: kramdown
 theme: minima
 sass:
+  sass_dir: assets/css
   style: compressed
   implementation: sass-embedded
 plugins:
