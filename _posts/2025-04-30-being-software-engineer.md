@@ -1,7 +1,7 @@
 ---
 layout: post
-title: 作为软件工程师的几条建议
-date:   2025-04-30 08:35:48 +0800
+title: 软件工程师小贴士
+date:  2025-04-30 08:35:48 +0800
 categories: technology
 tags: [Soft skills]
 ---
