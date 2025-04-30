@@ -1,11 +1,16 @@
 ---
 layout: post
 title: 软件工程师小贴士
+description: "如何在快速发展的 AI 时代中脱颖而出？本文提供了 10 个实用建议。"
+keywords: "软件工程师, 职业发展, AI 技术"
 date:  2025-04-30 08:35:48 +0800
 categories: technology
-tags: [Soft skills]
+tags: [Soft skills, Career]
 ---
+![题图](/assets/images/software-engineer-tips.png)
+
 每个人都想拥有一个好的职业生涯，但随着经济环境下行，AI 技术的快速发展，我们需要做什么？
+<!--more-->
 没错！你需要🔥 🔥 **脱颖而出**💯意味着作为一个软件开发人员，你需要：
 
 #### 1、修炼你的基础
@@ -24,7 +29,7 @@ tags: [Soft skills]
 
 无论是线上社区还是周围附近的线下社群，它将帮助你和人们建立连接，甚至还会帮你找到一份好工作！
 
-#### 5、建立有意义的关系
+#### 5、建立有意义的联系
 
 保持谦逊并乐于助人，这将构建有意义和持久的人脉资源。
 
